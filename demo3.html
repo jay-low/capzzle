@@ -1,0 +1,156 @@
+<html>
+<head>
+  <style type="text/css">
+    * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  background: #eee;
+  user-select: none;
+  overflow: hidden;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */
+  background: #cedce7; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #cedce7 0%, #596a72 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #cedce7 0%,#596a72 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+a {
+  color: #fff;
+  font-family: Tahoma;
+  text-decoration: none;
+  margin-left: 10px;
+  border-bottom: 2px dashed #fff;
+}
+
+[type=radio] {
+  display: none;
+}
+
+.slider {
+  height: 30%;
+  max-height: 30vh;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.slider label {
+  margin: auto;
+  width: 60%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0; right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.slider1:checked ~ .slide4, .slider2:checked ~ .slide5,
+.slider3:checked ~ .slide1, .slider4:checked ~ .slide2,
+.slider5:checked ~ .slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-30%,0,-200px);
+}
+
+.slider1:checked ~ .slide5, .slider2:checked ~ .slide1,
+.slider3:checked ~ .slide2, .slider4:checked ~ .slide3,
+.slider5:checked ~ .slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-15%,0,-100px);
+}
+
+.slider1:checked ~ .slide1, .slider2:checked ~ .slide2,
+.slider3:checked ~ .slide3, .slider4:checked ~ .slide4,
+.slider5:checked ~ .slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0,0,0);
+}
+
+.slider1:checked ~ .slide2, .slider2:checked ~ .slide3,
+.slider3:checked ~ .slide4, .slider4:checked ~ .slide5,
+.slider5:checked ~ .slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(15%,0,-100px);
+}
+
+.slider1:checked ~ .slide3, .slider2:checked ~ .slide4,
+.slider3:checked ~ .slide5, .slider4:checked ~ .slide1,
+.slider5:checked ~ .slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(30%,0,-200px);
+}
+
+.slide1 { background: #00BCD4 }
+.slide2 { background: #4CAF50 }
+.slide3 { background: #CDDC39 }
+.slide4 { background: #FFC107 }
+.slide5 { background: #FF5722 }
+  </style>
+</head>
+<body>
+  <div>
+    <a href="index.html">Index</a>
+    <a href="demo1.html">Demo 1</a>
+    <a href="demo2.html">Demo 2</a>
+    <a href="demo3.html">Demo 3</a>
+  </div>
+
+
+  <div style="display: table; width: 100vw; height: 100vh; box-sizing: border-box; text-align: center;">
+    <div style="display: table-cell; vertical-align: middle;">
+      <div style="transform: rotate(90deg); height: 500px; width: 300px; margin: 0 auto;">
+        <section class="slider">
+          <input type="radio" name="slider" id="s11" class="slider1">
+          <input type="radio" name="slider" id="s12" class="slider2">
+          <input type="radio" name="slider" id="s13" class="slider3" checked>
+          <input type="radio" name="slider" id="s14" class="slider4">
+          <input type="radio" name="slider" id="s15" class="slider5">
+          <label for="s11" class="slide1"></label>
+          <label for="s12" class="slide2">
+            <img src="slider-image1.png" style="width: 100%; height: 100%;" />
+          </label>
+          <label for="s13" class="slide3"></label>
+          <label for="s14" class="slide4"></label>
+          <label for="s15" class="slide5"></label>
+        </section>
+        <section class="slider">
+          <input type="radio" name="slider2" id="s21" class="slider1" checked>
+          <input type="radio" name="slider2" id="s22" class="slider2">
+          <input type="radio" name="slider2" id="s23" class="slider3">
+          <input type="radio" name="slider2" id="s24" class="slider4">
+          <input type="radio" name="slider2" id="s25" class="slider5">
+          <label for="s21" class="slide1"></label>
+          <label for="s22" class="slide2"></label>
+          <label for="s23" class="slide3"></label>
+          <label for="s24" class="slide4">
+            <img src="slider-image2.png" style="width: 100%; height: 100%;" />
+          </label>
+          <label for="s25" class="slide5"></label>
+        </section>
+        <section class="slider">
+          <input type="radio" name="slider3" id="s31" class="slider1">
+          <input type="radio" name="slider3" id="s32" class="slider2">
+          <input type="radio" name="slider3" id="s33" class="slider3">
+          <input type="radio" name="slider3" id="s34" class="slider4">
+          <input type="radio" name="slider3" id="s35" class="slider5" checked>
+          <label for="s31" class="slide1">
+            <img src="slider-image3.png" style="width: 100%; height: 100%;" />
+          </label>
+          <label for="s32" class="slide2"></label>
+          <label for="s33" class="slide3"></label>
+          <label for="s34" class="slide4"></label>
+          <label for="s35" class="slide5"></label>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
